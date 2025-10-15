@@ -5,7 +5,6 @@ import Home from "./pages/Home";
 import { BrowserRouter, Routes, Route } from "react-router-dom"; // Import Route and BrowserRouter correctly
 import { Toaster } from "react-hot-toast";
 import About from "./pages/About";
-import Map from "./pages/Map";
 
 function App() {
   return (
@@ -16,7 +15,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/map" element={<Map />} />
+          {/* <Route path="/map" element={<Map />} /> */}
           <Route path="*" element={<Home />} />
         </Routes>
 

@@ -1,8 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
-    <footer className="bg-gray-400 dark:bg-gray-900 mt-12">
+    <footer className="bg-gray-400 dark:bg-gray-900 mt-12 sm:mt-5">
       <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
         <div className="md:flex md:justify-between">
           <div className="mb-6 md:mb-0">
@@ -17,16 +18,19 @@ function Footer() {
               </h2>
               <ul className="text-gray-500 dark:text-gray-400 font-medium">
                 <li className="mb-4">
-                  <a href="https://flowbite.com/" className="hover:underline">
-                    Flowbite
+                  <a
+                    href="https://lankanewsweb.net/"
+                    className="hover:underline"
+                  >
+                    News
                   </a>
                 </li>
                 <li>
                   <a
-                    href="https://tailwindcss.com/"
+                    href="https://www.sltda.gov.lk/en/history"
                     className="hover:underline"
                   >
-                    Tailwind CSS
+                    Info
                   </a>
                 </li>
               </ul>
@@ -36,8 +40,14 @@ function Footer() {
                 QUICK LINKS
               </h2>
               <ul className="text-gray-500 dark:text-gray-400 font-medium">
-                <li className="mb-4">Home</li>
-                <li>About Us</li>
+                <li className="mb-4">
+                  {" "}
+                  <Link to="/">Home</Link>
+                </li>
+                <li className="mb-4">
+                  {" "}
+                  <Link to="/about">About Us</Link>
+                </li>
               </ul>
             </div>
             <div>

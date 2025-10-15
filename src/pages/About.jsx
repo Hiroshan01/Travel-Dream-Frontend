@@ -9,6 +9,7 @@ function About() {
     location: "",
     rating: "",
     experience: "",
+    email: "",
   });
 
   const [loading, setLoading] = useState(false);
@@ -18,6 +19,7 @@ function About() {
       location: "",
       rating: "",
       experience: "",
+      email: "",
     });
   };
 
@@ -25,10 +27,8 @@ function About() {
     e.preventDefault();
     setLoading(true);
 
-    console.log("Form data being sent:", feedbackData);
-
     try {
-      const response = await axios.post(
+      await axios.post(
         import.meta.env.VITE_BACKEND_URL + "/api/feedback",
         feedbackData,
         {
@@ -38,12 +38,10 @@ function About() {
 
       // Success toast
       toast.success("Send Feedback !");
-      console.log("Response:", response.data);
 
       resetForm();
     } catch (error) {
       console.error("Full error object:", error);
-      console.error("Error response data:", error.response?.data);
 
       // Error toast
       const errorMessage = error.response?.data?.message;
@@ -303,6 +301,24 @@ function About() {
           </div>
 
           <div className="w-full" onSubmit={handleSubmit}>
+            <div className="mb-6">
+              <label
+                className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                htmlFor="email"
+              >
+                Email *
+              </label>
+              <input
+                className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                id="email"
+                type="text"
+                placeholder="Enter location name"
+                value={feedbackData.email}
+                onChange={(e) =>
+                  setFeedbackData({ ...feedbackData, email: e.target.value })
+                }
+              />
+            </div>
             {/* Location Field */}
             <div className="mb-6">
               <label

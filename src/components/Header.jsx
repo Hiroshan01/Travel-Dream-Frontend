@@ -32,7 +32,7 @@ function Header() {
                 About Us
               </Link>
             </li>
-            <li>
+            {/* <li>
               <Link
                 to="/map"
                 className="text-gray-700 hover:text-indigo-600 font-bold"
@@ -40,7 +40,7 @@ function Header() {
                 {" "}
                 Map
               </Link>
-            </li>
+            </li> */}
           </ul>
 
           {/* Mobile menu button */}
@@ -96,15 +96,6 @@ function Header() {
             >
               {" "}
               About Us
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="/map"
-              className="text-gray-700 hover:text-indigo-600 font-bold"
-            >
-              {" "}
-              Map
             </Link>
           </li>
         </ul>

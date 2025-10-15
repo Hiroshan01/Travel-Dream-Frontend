@@ -38,10 +38,8 @@ function Home() {
     e.preventDefault();
     setLoading(true);
 
-    console.log("Form data being sent:", formData);
-
     try {
-      const response = await axios.post(
+      await axios.post(
         import.meta.env.VITE_BACKEND_URL + "/api/booking",
         formData,
         {
@@ -51,7 +49,6 @@ function Home() {
 
       // Success toast
       toast.success("Booking Successfull ! Please Check Your E-Mail");
-      console.log("Response:", response.data);
 
       resetForm();
     } catch (error) {
@@ -60,7 +57,7 @@ function Home() {
 
       // Error toast
       const errorMessage = error.response?.data?.message;
-      toast.error("❌ " + errorMessage);
+      toast.error(errorMessage);
     } finally {
       setLoading(false);
     }
