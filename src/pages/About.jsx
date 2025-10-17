@@ -356,11 +356,11 @@ function About() {
                 }
               >
                 <option value="">Select Rating</option>
-                <option value="Poor">1 - Poor</option>
-                <option value="Fair">2 - Fair</option>
-                <option value="Good">3 - Good</option>
-                <option value="Very Good">4 - Very Good</option>
-                <option value=" Excellent">5 - Excellent</option>
+                <option value="1">1 - Poor</option>
+                <option value="2">2 - Fair</option>
+                <option value="3">3 - Good</option>
+                <option value="4">4 - Very Good</option>
+                <option value="5">5 - Excellent</option>
               </select>
             </div>
 
