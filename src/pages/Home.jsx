@@ -48,7 +48,9 @@ function Home() {
       );
 
       // Success toast
-      toast.success("Booking Successfull ! Please Check Your E-Mail");
+      toast.success(
+        "Booking Successfull ! Please Check Your E-Mail Box or Spam Folder."
+      );
 
       resetForm();
     } catch (error) {
